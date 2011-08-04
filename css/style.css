@@ -251,7 +251,7 @@ pre {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-moz-box-shadow:0 -1px 0 #444444;
-	background-color:#222222;
+	background-color:#222222 center;
 	color:#FFFFFF;
 	font-size:13px;
 	margin:0 0 0 -40px;
@@ -260,7 +260,6 @@ pre {
 	white-space:pre-wrap;
 	width:640px;
 	word-wrap:break-word;
-    text-align:center;
 }
 div.notice {
 	-moz-border-radius:5px 5px 5px 5px;
