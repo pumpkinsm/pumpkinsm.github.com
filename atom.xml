@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Pumpkin's</title>
- <link href="http://blog.mousun.com/atom.xml" rel="self"/>
- <link href="http://blog.mousun.com/"/>
+ <link href="http://mousun.com/atom.xml" rel="self"/>
+ <link href="http://mousun.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://blog.mousun.com/</id>
+ <id>http://mousun.com/</id>
  <author>
    <name>pumpkinsm</name>
    <email>123sssmmm@gmail.com</email>
@@ -17,9 +17,9 @@ layout: nil
  {% for post in site.posts limit:20 %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://blog.mousun.com{{ post.url }}"/>
+   <link href="http://mousun.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://blog.mousun.com{{ post.id }}</id>
+   <id>http://mousun.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
