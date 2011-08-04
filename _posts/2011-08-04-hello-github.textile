@@ -1,0 +1,12 @@
+---
+layout: post
+title: 新的博客
+category: Blog
+---
+
+p(date). 2010-08-27
+
+{% highlight c++ %}
+//test for highlight
+printf("This is the first post for this new blog.");
+{% endhighlight %}
