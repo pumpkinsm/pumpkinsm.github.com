@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 新的博客
-category: Blog
+category: blog
 ---
 
 p(date). 2010-08-27
