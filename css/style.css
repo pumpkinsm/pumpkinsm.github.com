@@ -140,7 +140,10 @@ div#content ul.posts li {
 	font-size:14px;
 	list-style:none;
 }
-
+div.change_btn {
+	float: right;
+	margin-top: 15px;
+}
 p.nav {
 	color:#000;
 	font-size:18px;
