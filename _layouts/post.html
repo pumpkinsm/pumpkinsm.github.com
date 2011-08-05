@@ -44,6 +44,25 @@
 					document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
 					})()
 				</script>
+
+				<script type="text/javascript">
+				(function(){
+				var p = {
+					url:location.href,
+					desc:'',/*默认分享理由(可选)*/
+					summary:'',/*摘要(可选)*/
+					title:'',/*分享标题(可选)*/
+					site:'',/*分享来源 如：腾讯网(可选)*/
+					pics:'' /*分享图片的路径(可选)*/
+				};
+				var s = [];
+				for(var i in p){
+					s.push(i + '=' + encodeURIComponent(p[i]||''));
+				}
+				document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',s.join('&'),'" target="_blank" title="分享到QQ空间"><img src="http://qzonestyle.gtimg.cn/ac/qzone_v5/app/app_share/share_m.png" alt="分享到QQ空间" /></a>'].join(''));
+				})();
+				</script>
+				
 			</div>
 				<h2>{{ page.title }}</h2>
 				<div class="cnt">
