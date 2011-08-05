@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SGU 解题报告
-category: thinking
+category: inbrain
 ---
 
 bq. 出来实习快一个月了，感觉做dev真的实在太engineering，每天接触到的都是大量知识性的，系统性结构性的东西，感觉就像在写一道写不完的模拟题。深感思维量严重不足，于是决定闲时做做sgu，怎么也得写个一两百题吧。so,enjoy. sm@ 8/5/2011
