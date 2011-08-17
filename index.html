@@ -5,9 +5,15 @@ title: Pumpkin's
 
 <h1></h1>
 <ul class="posts">
+    <table>
 		{% for post in site.posts %}
-		<li><p class="date" cate="{{ post.categories }}">{{ post.date | date:"%Y-%m-%d" }}</p> <a href="/{{ post.category }}.html">{{ post.category }}</a> | <a href="{{ post.url }}">{{ post.title }}</a></li>
+            <tr>
+		    <td><p class="date" cate="{{ post.categories }}">{{ post.date | date:"%Y-%m-%d" }}</p></td>
+            <td><a href="/{{ post.category }}.html">{{ post.category }}</a></td>
+            <td> | <a href="{{ post.url }}">{{ post.title }}</a></td>
+            </tr>
 		{% endfor %}
+    </table>
 </ul>
 
 </div>
