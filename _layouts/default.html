@@ -20,29 +20,8 @@
 	</head>
 
 	<body>
-		<div id="logo"><h1><a href="/">Pumpkin's</a></h1></div>
-		<div id="wrapper">
-			<div id="content" class="index">
-				<div id="sidebar">
-					<ul>
-						<li>
-							<a href="#">ARTICLES</a>
-							<ul>
-								{% for category in site.categories %}
-								<li><a href="/{{ category[0]  }}.html"> {{ category[0]  }}</a></li>
-								{% endfor %}
-							</ul>
-						</li>
-						<li><a href="/about.html">ABOUT</a></li>
-						<li><a href="/links.html">LINKS</a></li>
-					</ul>
-				</div>
-				
-				<div id="main">
-				{{ content }}
-				</div>
-
-
+        <section id="about-me" style="overflow-x: visble; overflow-y: visable; ">
+            <div class="constraint">
                 <div id="progress-bar-container" style="display: block; ">
                     <div class="progress-bar">
                         <div class="progress" style="width: 27.53%; ">
@@ -67,6 +46,30 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+		<div id="logo"><h1><a href="/">Pumpkin's</a></h1></div>
+		<div id="wrapper">
+			<div id="content" class="index">
+				<div id="sidebar">
+					<ul>
+						<li>
+							<a href="#">ARTICLES</a>
+							<ul>
+								{% for category in site.categories %}
+								<li><a href="/{{ category[0]  }}.html"> {{ category[0]  }}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+						<li><a href="/about.html">ABOUT</a></li>
+						<li><a href="/links.html">LINKS</a></li>
+					</ul>
+				</div>
+				
+				<div id="main">
+				{{ content }}
+				</div>
 
 
 				<div id="footer">

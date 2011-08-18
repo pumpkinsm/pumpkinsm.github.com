@@ -427,14 +427,15 @@ span.balloon {
 	padding:0 4px 0 0;
 }
 
+
 #about-me .progress-bar {
     position: relative;
-    width: 7px;
-    height: 800px;
+    width: 800px;
+    height: 7px;
     border-radius: 100px;
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
-    background: #666;
+    background: #fff;
     margin: 0 auto;
     overflow: visible;
 }
@@ -524,5 +525,21 @@ span.balloon {
     clear: both;
     position: relative;
 }
+.constraint {
+    display: block;
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+#about-me {
+background: url(../images/grunge-bg-2.png);
+overflow: hidden;
+}
+section {
+display: block;
+zoom: 1;
+}
+
 
 
