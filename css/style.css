@@ -72,6 +72,7 @@ h1 a:hover {
 	color:#ddd;
 }
 div#wrapper {
+    float: right;
 	-moz-border-radius:5px 5px 5px 5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
