@@ -82,7 +82,7 @@ div#wrapper {
 	line-height:190%;
 	margin:0 auto 50px;
 	padding:20px;
-	text-shadow:0 1px 0 #FFFFFF;
+	/*text-shadow:0 1px 0 #FFFFFF;*/
 	width:700px;
 }
 
@@ -426,120 +426,16 @@ span.balloon {
 #feed .info {
 	padding:0 4px 0 0;
 }
-
-
-#about-me .progress-bar {
-    position: relative;
-    width: 800px;
-    height: 7px;
-    border-radius: 100px;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-    background: #fff;
-    margin: 0 auto;
-    overflow: visible;
+div#lifebar {
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow:0 1px 0 #FFFFFF;
+	background-color:#EEEEEE;
+	color:#222222;
+	font-size:14px;
+	line-height:190%;
+	margin:10px;
+	padding:20px;
+	width:20px;
 }
-#about-me .progress {
-    width: 100%;
-    height: 10px;
-    border-radius: 100px;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-}
-#about-me .progress-bar .progress .notes{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    margin: 0px;
-    padding: 0px;
-}
-#about-me .progress-bar .progress .notes li.personal { 
-    top: 15px;
-    background: url(../images/pin-black.png) no-repeat center top;
-    background-image: url(http://henry.brown.name/images/pin-black.png);
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
-    background-attachment: initial;
-    background-position-x: 50%;
-    background-position-y: 0%;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
-}
-#about-me .progress-bar .progress .notes li .caption {
-    padding: 10px;
-    width: 200px;
-    background: #333;
-    position: absolute;
-    z-index: 500;
-    display: none;
-         border-radius: 4px;
-         -moz-border-radius: 4px;
-         -webkit-border-radius: 4px;
-         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
-         -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
-         -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
-}
-#about-me .progress-bar .progress .notes li.personal .caption {
-    top: 40px;
-    left: -10px;
-    padding-top: 10px;
-}
-#about-me .progress-bar .progress .notes li.personal .caption .arrow {
-    border-color: transparent transparent #333 transparent;
-    border-style: solid;
-    border-width: 5px;
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: -10px;
-    left: 17px;
-}
-#about-me .progress-bar .progress .notes li .caption h4 {
-    font-weight: 600;
-    margin: 0 0 5px 0;
-        font-size: 14px;
-        text-align: left;
-    color: white;
-}
-#about-me .progress-bar .progress .notes li .caption h4 span {
-    color: #999;
-}
-#about-me .progress-bar .progress .notes li .caption p {
-    font-size: 12px;
-    color: white;
-    text-shadow: none;
-    margin: 0px;
-}
-#about-me .progress-bar .progress .notes li .caption p {
-    font-size: 12px;
-    color: white;
-       text-shadow: none;
-    margin: 0px;
-}
-#about-me #progress-bar-container {
-    display: none;
-    padding: 20px 0 40px 0;
-    clear: both;
-    position: relative;
-}
-.constraint {
-    display: block;
-    width: 900px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-#about-me {
-background: url(../images/grunge-bg-2.png);
-overflow: hidden;
-}
-section {
-display: block;
-zoom: 1;
-}
-
-
-
