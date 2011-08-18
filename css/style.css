@@ -436,8 +436,8 @@ div#lifebar {
 	width:1000px;
     height:7px;
 }
-div#lifebar_mark {
-    background-color:#666;
+#lifebar .mrk {
+    background-color:#222222;
     width:5px;
-    height:7px;
+    height:10px;
 }
