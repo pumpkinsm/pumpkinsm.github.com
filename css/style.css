@@ -297,7 +297,6 @@ p.article_date {
 	margin:0;
 }
 span#article_buttons {
-	float:right;
 	margin:20px 0;
 	text-align:right;
 }
@@ -318,7 +317,6 @@ span.balloon {
 	line-height:16px;
 	margin:0 5px;
 	padding:3px 5px;
-	text-shadow:0 1px 0 #000000;
 }
 
 #sidebar {
