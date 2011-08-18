@@ -432,11 +432,7 @@ div#lifebar {
 	border-radius:5px;
 	-moz-box-shadow:0 1px 0 #FFFFFF;
 	background-color:#EEEEEE;
-	color:#222222;
-	font-size:14px;
-	line-height:190%;
 	margin:0 auto 50px;
-	padding:20px;
 	width:800px;
     height:7px;
 }
