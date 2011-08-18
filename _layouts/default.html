@@ -17,19 +17,22 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		</script>
+        <script type="text/javascript">
+            function len(year,month,day){
+                var end = new Date()
+                var start = new Date(1989,5,3)
+                var t = new Date(year,month,day)
+                return ((t-start)/(end-start))*100
+            }
+        </script>
 	</head>
 
 	<body>
         <div id="lifebar">
             <script type="text/javascript">
-                var end = new Date()
-                var start = new Date(1989,5,3)
-                var t = new Date(1989,10,3)
-                var c = ((t-start)/(end-start))*100
-                document.write("<a target=\"_blank\" style=\"left: " + c + "%; \">")
+                document.write("<a target=\"_blank\" style=\"left: " + len(1989,10,3) + "%; \">")
             </script>
-                <span class="balloon">I said Hello World!</span><img src="/image/tweet.png" /></a>
-            </div>
+                <span class="balloon">I said Hello World!</span><img src="/image/Mark.png" /></a>
         </div>
 		<div id="logo"><h1><a href="/">Pumpkin's</a></h1></div>
 		<div id="wrapper">
