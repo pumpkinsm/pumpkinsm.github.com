@@ -444,9 +444,9 @@ div#lifebar {
     border-radius:5px;
     -moz-box-shadow:0 1px 0 #FFFFFF;
     background-color:#EEEEEE;
-    margin: 0 0 0 20px;
+    margin: 85px 0 0 20px;
     width: 10px;
-    height:900px;
+    height:700px;
 }
 #lifebar div.lifebarMrk {
     position: absolute;
