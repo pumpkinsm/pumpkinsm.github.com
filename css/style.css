@@ -447,7 +447,6 @@ div#lifebar {
 	width:1000px;
     height:7px;
 }
-#lifebar .mrk {
-    width:5px;
-    height:10px;
+div#lifebarMrk {
+	margin-left: 0%;
 }
