@@ -18,17 +18,22 @@
 		  })();
 		</script>
         <script type="text/javascript">
-            function len(year,month,day){
+            function len(t){
                 var end = new Date()
                 var start = new Date(1989,9,3)
-                var t = new Date(year,month,day)
                 return ((t-start)/(end-start))*100
             }
-        </script>
+		</script>
+		<script type="text/javascript">
+			var Time = new Array(new Date(1989,10,3),
+								new Date(2008,6,8));
+			var decr = new Array("出生&说\"Hello World.\"",
+								"高中毕业，去他妈的")
+		</script>
 	</head>
 
 	<body>
-		<div id="lifebar">
+		<div id="lifebar"><!--
             <script type="text/javascript">
 				document.write("<div id=\"lifebarMrk\" style=\"margin-left: " + len(1989,10,3) + "%; \">")
 			</script>
@@ -39,7 +44,17 @@
 				"I said Hello World!"
 				</pre>
 			</span><img src="/image/Mark.png" /></a>
-		</div></div>
+		</div></div>-->
+		<script type="text/javascript">
+			for (i in Time) {	
+				document.write("<div id=\"lifebarMrk\" style=\"margin-left: " + len(Time[i]) + "%; \">")
+				document.write("<a target=\"_blank\"><span class=\"balloon\"><pre style=\"width: 200px; \">")
+				document.write("<strong>" + Time[i].toDateString() + "</strong>")
+				document.write(decr[i])
+				document.write("</pre></span><img src="/image/Mark.png" /></a></div>")
+			}
+		</script>
+		</div>
 		<div id="logo"><h1><a href="/">Pumpkin's</a></h1></div>
 		<div id="wrapper">
 			<div id="content" class="index">
