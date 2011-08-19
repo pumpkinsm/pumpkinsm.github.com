@@ -448,7 +448,6 @@ div#lifebar {
     height:7px;
 }
 div#lifebarMrk {
-	display: absolute;
-	left: 0%;
-	top: 1%;
+	padding-left: 0%;
+	width: 5px;
 }
