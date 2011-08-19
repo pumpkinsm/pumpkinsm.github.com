@@ -82,7 +82,7 @@ div#wrapper {
 	line-height:190%;
 	margin:0 auto 50px;
 	padding:20px;
-	text-shadow:0 1px 0 #FFFFFF;
+	/*text-shadow:0 1px 0 #FFFFFF;*/
 	width:700px;
 }
 
@@ -297,7 +297,6 @@ p.article_date {
 	margin:0;
 }
 span#article_buttons {
-	float:right;
 	margin:20px 0;
 	text-align:right;
 }
@@ -309,16 +308,16 @@ a:hover span.balloon {
 }
 span.balloon {
 	-moz-border-radius:5px 5px 5px 5px;
-	-moz-box-shadow:0 -1px 0 #444444;
-	background-color:#222222;
-	color:#FFFFFF;
+    -webkit-border-radius:5px;
+	border-radius:5px;
+	background-color:#EEEEEE;
+	color:#333;
 	display:none;
 	font-size:10px;
 	font-weight:500;
 	line-height:16px;
 	margin:0 5px;
 	padding:3px 5px;
-	text-shadow:0 1px 0 #000000;
 }
 
 #sidebar {
@@ -426,18 +425,17 @@ span.balloon {
 #feed .info {
 	padding:0 4px 0 0;
 }
-
-
-#about-me .progress-bar {
-	position: relative;
-	width: 7px;
-	height: 745px;
-	border-radius: 100px;
-	-moz-border-radius: 100px;
-	-webkit-border-radius: 100px;
-	background: #333;
-	margin: 0 auto;
-	overflow: visible;
+div#lifebar {
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow:0 1px 0 #FFFFFF;
+	background-color:#EEEEEE;
+	margin:0 auto 50px;
+	width:1000px;
+    height:7px;
 }
-
-
+#lifebar .mrk {
+    width:5px;
+    height:10px;
+}
