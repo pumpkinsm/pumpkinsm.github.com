@@ -44,11 +44,11 @@
 								new Date(2008,6,8));
 			var decr = new Array("出生，说\"Hello World.\"",
 								"高中毕业，去他妈的")
-			for (var i in Time) {	
-				document.write("<div id=\"lifebarMrk\" style=\"margin-left: " + len(i) + "%; \">")
+			for (i=0;i<Time.length;i++) {
+				document.write("<div id=\"lifebarMrk\" style=\"margin-left: " + len(Time[i]) + "%; \">")
 				document.write("<a target=\"_blank\"><span class=\"balloon\"><pre style=\"width: 200px; \">")
-				document.write("<strong>" + i.toDateString() + "</strong>")
-				/*document.write(decr[i])*/
+				document.write("<strong>" + Time[i].toDateString() + "</strong>")
+				document.write(decr[i])
 				document.write("</pre></span><img src="/image/Mark.png" /></a></div>")
 			}
 		</script>
