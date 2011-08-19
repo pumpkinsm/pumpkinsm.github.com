@@ -453,4 +453,7 @@ div#lifebar {
     top: 0%;
     width: 15px;
 }
-
+#lifebar h1 {
+	font-size: 20px;
+	color:#EEEEEE;
+}
