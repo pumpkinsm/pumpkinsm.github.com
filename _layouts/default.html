@@ -27,18 +27,7 @@
 	</head>
 
 	<body>
-		<div id="lifebar"><!--
-            <script type="text/javascript">
-				document.write("<div id=\"lifebarMrk\" style=\"margin-left: " + len(1989,10,3) + "%; \">")
-			</script>
-			<a target="_blank">
-			<span class="balloon">
-				<pre style="width: 200px; ">
-				<strong>1989-10-3</strong>
-				"I said Hello World!"
-				</pre>
-			</span><img src="/image/Mark.png" /></a>
-		</div></div>-->
+		<div id="lifebar">
 		<script type="text/javascript">
 			var Time = new Array(new Date(1989,10,3),
 								new Date(2008,6,8));
@@ -47,7 +36,7 @@
 			for (i=0;i<Time.length;i++) {
 				document.write("<div id=\"lifebarMrk\" style=\"padding-left: " + len(Time[i]) + "%; \">")
 				document.write("<a target=\"_blank\"><span class=\"balloon\"><pre style=\"width: 200px; \">")
-				document.write("<strong>" + Time[i].toDateString() + "</strong>")
+				document.write("<strong>" + Time[i].toDateString() + "</strong><br>")
 				document.write(decr[i])
 				document.write("</pre></span><img src=\"/image/Mark.png\" /></a></div>")
 			}
