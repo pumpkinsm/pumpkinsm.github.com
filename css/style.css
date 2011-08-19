@@ -319,6 +319,19 @@ span.balloon {
 	margin:0 5px;
 	padding:3px 5px;
 }
+span.ballon pre {
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background-color:#EEEEEE;
+	color:#666;
+	font-size:13px;
+	text-align:left;
+	margin:0;
+	padding:10px;
+	white-space:pre-wrap;
+	width:500px;
+}
+
 
 #sidebar {
 	float:left;
