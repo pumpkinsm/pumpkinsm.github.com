@@ -427,3 +427,17 @@ span.balloon {
 	padding:0 4px 0 0;
 }
 
+
+#about-me .progress-bar {
+	position: relative;
+	width: 7px;
+	height: 745px;
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	background: #333;
+	margin: 0 auto;
+	overflow: visible;
+}
+
+
