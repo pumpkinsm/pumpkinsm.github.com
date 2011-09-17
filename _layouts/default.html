@@ -18,22 +18,47 @@
 		  })();
 		</script>
         <script type="text/javascript">
-            function len(year,month,day){
+            function len(t){
                 var end = new Date()
-                var start = new Date(1989,5,3)
-                var t = new Date(year,month,day)
-                return ((t-start)/(end-start))*100
+                var start = new Date(1989,8,3)
+                return ((t-start)/(end-start))*700+10+85
             }
-        </script>
+		</script>
 	</head>
 
 	<body>
-        <div id="lifebar">
-            <script type="text/javascript">
-                document.write("<a target=\"_blank\" style=\"left: " + len(1989,10,3) + "%; \">")
-            </script>
-                <span class="balloon">I said Hello World!</span><img src="/image/Mark.png" /></a>
-        </div>
+		<div id="lifebar">
+		<h1>Before I passed out.</h1>
+		<script type="text/javascript">
+			var Time = new Array(new Date(1989,10 -1,3),
+								new Date(1999,6 -1,1),
+								new Date(2001,9 -1,1),
+								new Date(2003,8 -1,15),
+								new Date(2005,9 -1,1),
+								new Date(2008,6 -1,8),
+								new Date(2008,9 -1,1),
+								new Date(2010,11 -1,24),
+								new Date(2011,7 -1,11),
+								new Date());
+			var decr = new Array("Born, said: \"Hello World.\"",
+								"The tailender of school, nice youth.",
+								"The shine of my teen appeared.",
+								"Away from hometown, the year of darkness.",
+								"Highschool => the big step of my convertion.",
+								"Working hardest to away from my happiest day, What a pity.",
+								"The stupid, free, yearning University Days.",
+								"The end of my ACM.",
+								"First job => SDE intern @M$.",
+								"It's Now!Guess what am I doing?")
+			for (i=0;i<Time.length;i++) {
+				document.write("<div class=\"lifebarMrk\" style=\"top: " + len(Time[i]) + "px; \">")
+				document.write("<a target=\"_blank\"><span class=\"balloon\"><pre style=\"width: " + (decr[i].length/decr[0].length)*250 +"px; \">")
+				document.write("<strong>" + Time[i].toDateString() + "</strong><br>")
+				document.write(decr[i])
+				document.write("</pre></span><img src=\"/image/Mark.png\" /></a></div>")
+			}
+		</script>
+		</div>
 		<div id="logo"><h1><a href="/">Pumpkin's</a></h1></div>
 		<div id="wrapper">
 			<div id="content" class="index">
