@@ -24,25 +24,21 @@ h3. 数据唯一字典系统的简单设计
 
 * 设计图
 
-** <img src="/image/Drawing1.png" />
+<img src="/image/Drawing1.png" width="600" height="500" />
 
 * Dispatch Server
-
 ** 功能：监听接收输入数据，为每个输入指定主机群中唯一目的主机进行处理。
 ** 目的：负载均衡，不变性（相同输入总是分配同一主机），快速，并行，主机群的容错扩展性。
 ** 实现：对输入进行一致性哈希（chord算法，KAD算法等）指定目标主机，哈希函数尽量简单且易区分（比如以tree的size，height来做）
 
 * Hash Process
-
 ** 功能：对输入数据进行哈希
 ** 目的：效率保证的前提下哈希值包含输入数据尽量多的信息，使之唯一化。
 ** 实现：设计合适的哈希函数，输入tree，输出唯一Rating。例如杨戈那篇《Hash在信息学竞赛中的一类应用》中提到的一些HASH算法。
 
 * Map Process
-
 ** 每个map-process对应分布式文件系统中的一个chunkserver，输入为所有Hash-Process的输出Rating，输出为<key: Rating  , value: isExist >，其中isExist为1|0，代表该Rating在该chunkserver中时候出现。
 
 * Reduce Process
-
 ** 对map的输出进行combine & reduce，其输入的值对<Rating , isExist>进行求和，即统计聚合相同Rating为<Rating , Exist-Time>，输出其中Exist-Time等于Number of ChunkServer的Rating.
 
