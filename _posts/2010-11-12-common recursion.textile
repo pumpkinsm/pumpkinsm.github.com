@@ -1,8 +1,4 @@
----
-layout: post
-title: 常见递推关系解法
-category: inbrain
----
+
 p(date). 2010-11-12
 
 h4. a[n + 1]=a[n] + f(n)  ->  a[n] = a[ 1 ] + sum(f(k) | 1 <= k < n)
