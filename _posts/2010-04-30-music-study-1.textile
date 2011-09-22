@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 扒带配和弦相关的文章
-category: hobby
+category: enjoy
 ---
 p(date). 2010-04-30
 
