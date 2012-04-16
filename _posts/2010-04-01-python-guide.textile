@@ -1,0 +1,140 @@
+---
+layout: post
+title: python基础语法速查
+category: blog
+---
+
+p(date). 2010-04-01
+
+{% highlight python %}
+import math #包含模块
+from multiprocessing import heap #包含某个包中的模块,heap可为*表示包含所有
+
+#########################################
+print(math.pi)
+a=1
+print(a)
+a='hello world'
+print(a)
+a=[1,2,3]                   #[]是链表，可以更改
+print(a)
+a=(1,2,3)                   #()是元组，同字符串一样不可修改
+print(a)
+a=input('这里都是按字符串读入的\n')
+print(a)
+CutLine='='*10
+print('\n'+CutLine+' 1 '+CutLine)
+
+##########################################
+for v in range(8):          #range生成一个等差序列，三种参数
+    print(v)
+a=[v for v in range(2,8)]
+b=[v for v in range(8,2,-1) if v>5]
+print(a,',',b)
+a.extend(b)                 #extend将一个链表并入另一个链表
+print(a)
+a.append(7)                 #append往链表中插入元素
+a.sort()
+print(a)
+tmp=[[x,y] for (x,y) in zip(range(len(a)),a)]
+tmp.sort()                  #sort可以sort好多东西，只要有<定义
+print(tmp)
+print('\n'+CutLine+' 2 '+CutLine)
+
+##########################################
+#{}是字典，相当于STL里的map(个人感觉应该不可能是rbTree实现的，估计效率不高)
+h={'hey':100 , 110:'police'}        
+print(h[110],h['hey'])
+h['book']=110                       #元素形如key:val,key只能是不可变的类型
+h[(120,'1')]=['hey','pretty girl']
+l=h.keys()
+print(l)
+print('\n'+CutLine+' 3 '+CutLine)
+
+#########################################
+#Python是靠缩进来判断程序逻辑的，如下面两个循环，第一个else是if的，第二个是for的
+for i in range(10):
+    if i>6:
+        pass    #没事做就pass
+    else:
+        print(i)
+print('---')
+for i in range(10):
+    if i>6:
+        pass
+else:
+    print(i)
+print('\n'+CutLine+' 4 '+CutLine)
+
+########################################
+#函数的定义与调用
+def f(x):
+    for i in range(2,int(math.sqrt(x))+1):
+        if x%i==0 :
+            break
+    else:
+        return 1
+    return 0
+for i in range(2,100):
+    if f(i):
+        print(i,end=' ')    #Python3之后print变成了内置函数，必须要加括号，结尾要加的符号有参数end传递，不传递默认为'\n'
+else: print()
+def func(x,str='abs',val=123):
+    print(x,str,val)
+func(100)
+func(100,111)
+func(111,val='= =')         #python飘逸的参数传递
+print('\n'+CutLine+' 5 '+CutLine)
+
+########################################
+#dir()列出模块中定义的标识符，不传参数就是本模块的；以及文件的大致用法
+print(dir(math))
+print(dir())
+f=open("test.txt",'w')
+f.write('hey,pretty girl!')
+print('\n'+CutLine+' 6 '+CutLine)
+
+#######################################
+#类的定义访问及私有变量
+class human:
+    b=w=h=0
+    def __init__(self,B,W,H):    #构造函数,self相当于是实例的this指针（个人理解）
+        self.b , self.w , self.h = B,W,H
+    def ShowBWH(self):
+        print(self.b,self.w,self.h)
+    def __ColorOfBriefs(self):   #Python没有提供类似C++中private的机制，不过__name这样定义PYTHON会替换为_classname__name来混淆命名达到'私有'成员的目的
+        print('人家今天没有穿内裤啦')
+    def BadUncle(self):
+        self.__ColorOfBriefs()
+sm=human(80,80,80)
+sm.ShowBWH()
+human.ShowBWH(sm)   #human.ShowBWH(sm)与sm.ShowBWH()本质是一样的，大概都是通过self指针来表示类实例的吧
+sm.BadUncle()       #可以这样访问__ColorOfBriefs()但不能直接访问
+print('\n'+CutLine+' 7 '+CutLine)
+
+#######################################
+#类的继承与多继承
+class Girl(human):
+    def ShowBWH(self):
+        print("人家三围是%d %d %d了了啦" % (self.b,self.w,self.h))
+    def BadBoyfriend(self):     #因为human的__ColorOfBriefs()是'私有'的，所以这里访问时找不到的
+        self.__ColorOfBriefs()
+you=Girl(120,120,120)
+you.ShowBWH()
+you.BadUncle()                  #但是调用BadUncle可以访问，因为Uncle是基类的。
+print('----')
+#多继承按从左到右，深度优先的顺序去寻找所访问的成员。
+class Nice:
+    def __init__(self,x):
+        self.NiceVal=x
+class PrettyGirl(Girl,Nice):
+    pass
+LZL=PrettyGirl(999,70,100)      
+LZL.ShowBWH()       #注意这里调用的是Girl的构造函数以及ShowBWH，而不是human的或Nice的
+#不过我有点疑惑为什么LZL=prettyGirl(100)会异常，难道不支持重载嘛，应该在Girl中和human中找不到就去Nice中找啊?
+#PS:LZL=林志玲
+print('\n'+CutLine+' 8 '+CutLine)
+
+#######################################
+
+{% endhighlight %}
