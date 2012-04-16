@@ -1,7 +1,7 @@
 ---
 layout: post
 title: python基础语法速查
-category: blog
+category: tech
 ---
 
 p(date). 2010-04-01
